@@ -1,0 +1,179 @@
+@model DidimdeKirala.WebUI.Data.KiralikEvler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>KiralikEvler</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="KiralikEvlerID" />
+        <div class="form-group">
+            <label asp-for="IlanBaslik" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IlanBaslik" class="form-control" />
+                <span asp-validation-for="IlanBaslik" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="IlanAcıklama" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IlanAcıklama" class="form-control" />
+                <span asp-validation-for="IlanAcıklama" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="IlanTarihi" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IlanTarihi" class="form-control" />
+                <span asp-validation-for="IlanTarihi" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="OdaSayısı" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="OdaSayısı" class="form-control" />
+                <span asp-validation-for="OdaSayısı" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="IlanFiyatı" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="IlanFiyatı" class="form-control" />
+                <span asp-validation-for="IlanFiyatı" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmlakTipiID" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="EmlakTipiID" class="form-control" asp-items="ViewBag.EmlakTipiID"></select>
+                <span asp-validation-for="EmlakTipiID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="M2" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="M2" class="form-control" />
+                <span asp-validation-for="M2" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BinaYasi" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BinaYasi" class="form-control" />
+                <span asp-validation-for="BinaYasi" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BulunduguKat" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BulunduguKat" class="form-control" />
+                <span asp-validation-for="BulunduguKat" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="KatSayısı" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="KatSayısı" class="form-control" />
+                <span asp-validation-for="KatSayısı" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Isıtma" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Isıtma" class="form-control" />
+                <span asp-validation-for="Isıtma" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="BanyoSayısı" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="BanyoSayısı" class="form-control" />
+                <span asp-validation-for="BanyoSayısı" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="Esyalımı" />
+                    <label asp-for="Esyalımı"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="SiteIcindemi" />
+                    <label asp-for="SiteIcindemi"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SeciliIlkResimID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SeciliIlkResimID" class="form-control" />
+                <span asp-validation-for="SeciliIlkResimID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HaritaEnlem" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HaritaEnlem" class="form-control" />
+                <span asp-validation-for="HaritaEnlem" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HaritaBoylam" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="HaritaBoylam" class="form-control" />
+                <span asp-validation-for="HaritaBoylam" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MahalleID" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="MahalleID" class="form-control" asp-items="ViewBag.MahalleID"></select>
+                <span asp-validation-for="MahalleID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="YaratılmaTarihi" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="YaratılmaTarihi" class="form-control" disabled="disabled" />
+                <span asp-validation-for="YaratılmaTarihi" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DegismeTarihi" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DegismeTarihi" class="form-control" disabled="disabled" />
+                <span asp-validation-for="DegismeTarihi" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <div class="checkbox">
+                    <input asp-for="Aktifmi" />
+                    <label asp-for="Aktifmi"></label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

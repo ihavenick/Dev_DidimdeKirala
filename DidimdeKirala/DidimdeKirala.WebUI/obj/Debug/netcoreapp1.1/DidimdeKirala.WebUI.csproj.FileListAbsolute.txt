@@ -1,0 +1,10 @@
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\bin\Debug\netcoreapp1.1\DidimdeKirala.WebUI.deps.json
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\bin\Debug\netcoreapp1.1\DidimdeKirala.WebUI.runtimeconfig.json
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\bin\Debug\netcoreapp1.1\DidimdeKirala.WebUI.runtimeconfig.dev.json
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\bin\Debug\netcoreapp1.1\DidimdeKirala.WebUI.dll
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\bin\Debug\netcoreapp1.1\DidimdeKirala.WebUI.pdb
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\obj\Debug\netcoreapp1.1\DidimdeKirala.WebUI.csprojResolveAssemblyReference.cache
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\obj\Debug\netcoreapp1.1\DidimdeKirala.WebUI.AssemblyInfo.cs
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\obj\Debug\netcoreapp1.1\DidimdeKirala.WebUI.dll
+A:\Users\Prince\Documents\Gitlab\Dev_DidimdeKirala\DidimdeKirala\DidimdeKirala.WebUI\obj\Debug\netcoreapp1.1\DidimdeKirala.WebUI.pdb

@@ -1,0 +1,155 @@
+@model IEnumerable<DidimdeKirala.WebUI.Data.KiralikEvler>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IlanBaslik)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IlanAcıklama)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IlanTarihi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IlanFiyatı)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.M2)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OdaSayısı)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BinaYasi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BulunduguKat)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KatSayısı)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Isıtma)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BanyoSayısı)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Esyalımı)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SiteIcindemi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SeciliIlkResimID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HaritaEnlem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HaritaBoylam)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.YaratılmaTarihi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DegismeTarihi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Aktifmi)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmlakinTipi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KiralıkEvinMahallesi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlanBaslik)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlanAcıklama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlanTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IlanFiyatı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.M2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OdaSayısı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BinaYasi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BulunduguKat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KatSayısı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isıtma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BanyoSayısı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Esyalımı)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiteIcindemi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeciliIlkResimID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HaritaEnlem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HaritaBoylam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YaratılmaTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegismeTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aktifmi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmlakinTipi.EmlakTipiID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KiralıkEvinMahallesi.MahalleID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KiralikEvlerID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KiralikEvlerID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KiralikEvlerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

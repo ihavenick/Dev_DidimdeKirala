@@ -1,0 +1,30 @@
+@model DidimdeKirala.WebUI.Data.Mahalle
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mahalle</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MahalleAd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MahalleAd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MahalleninIlcesi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MahalleninIlcesi.IlceID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MahalleID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

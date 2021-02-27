@@ -1,0 +1,144 @@
+@model DidimdeKirala.WebUI.Data.KiralikEvler
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KiralikEvler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IlanBaslik)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlanBaslik)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlanAcıklama)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlanAcıklama)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlanTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlanTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OdaSayısı)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OdaSayısı)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IlanFiyatı)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IlanFiyatı)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.M2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.M2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BinaYasi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BinaYasi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BulunduguKat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BulunduguKat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KatSayısı)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KatSayısı)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Isıtma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Isıtma)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BanyoSayısı)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BanyoSayısı)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Esyalımı)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Esyalımı)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteIcindemi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SiteIcindemi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SeciliIlkResimID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SeciliIlkResimID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HaritaEnlem)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HaritaEnlem)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HaritaBoylam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HaritaBoylam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.YaratılmaTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.YaratılmaTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DegismeTarihi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DegismeTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Aktifmi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aktifmi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmlakinTipi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmlakinTipi.EmlakTipiID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KiralıkEvinMahallesi)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KiralıkEvinMahallesi.MahalleID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.KiralikEvlerID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

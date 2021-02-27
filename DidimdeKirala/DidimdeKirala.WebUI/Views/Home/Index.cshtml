@@ -1,0 +1,30 @@
+﻿@using DidimdeKirala.WebUI.Data
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel-group">
+            @foreach (KiralikEvler item in Model)
+            {
+                <a href="@Url.Action("Goruntule", new { ilanNo = @item.KiralikEvlerID })"><div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><img class="card-img-top img-responsive img-thumbnail" src="@item.Resimler.FirstOrDefault().ResimdosyaAd" alt="Card image cap"></div>
+                        <div class="panel-body">
+                            <h4 class="card-title">@item.IlanBaslik</h4>
+                            @*<p class="card-text">bos</p>*@
+                        </div>
+                        <div class="panel-footer">
+                            <ul class="breadcrumb">
+                                <li><a href="#">@item.KiralıkEvinMahallesi.MahalleninIlcesi.IlceAd</a></li>
+                                <li><a href="#">@item.KiralıkEvinMahallesi.MahalleAd</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            }
+        </div>
+    </div>
+</div>

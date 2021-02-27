@@ -1,0 +1,223 @@
+@using DidimdeKirala.WebUI.Data
+@model DidimdeKirala.WebUI.Data.KiralikEvler
+
+@{
+    ViewData["Title"] = "Goruntule";
+}
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    .hide-bullets {
+        list-style: none;
+        margin-left: -40px;
+        margin-top: 20px;
+    }
+</style>
+
+
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2>@Html.DisplayFor(model => model.IlanBaslik)</h2>
+            <hr />
+            <ul class="breadcrumb">
+                <li><a href="#">@Html.DisplayFor(model => model.KiralıkEvinMahallesi.MahalleninIlcesi.IlceAd)</a></li>
+                <li><a href="#">@Html.DisplayFor(model => model.KiralıkEvinMahallesi.MahalleAd)</a></li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="col-lg-9">
+                <div class="container">
+                    <div id="main_area">
+                        <!-- Slider -->
+                        <div class="row">
+                            <div class="col-xs-12" id="slider">
+                                <!-- Top part of the slider -->
+                                <div class="row">
+                                    <div class="col-sm-8" id="carousel-bounding-box">
+                                        <div class="carousel slide" id="myCarousel">
+                                            <!-- Carousel items -->
+                                            <div class="carousel-inner">
+                                                @{
+                                                    int sayac = 0;
+
+
+                                                    foreach (var item in ViewBag.deneme as List<EmlakResimleri>)
+                                                    {
+                                                        if (sayac == 0)
+                                                        {
+                                                            <div class="active item" data-slide-number="@sayac">
+                                                                <img class="img-responsive" src="http:\\@Context.Request.Host\@item.ResimdosyaAd">
+                                                            </div>
+
+                                                        }
+                                                        else
+                                                        {
+                                                            <div class="item" data-slide-number="@sayac">
+                                                                <img class="img-responsive" src="http:\\@Context.Request.Host\@item.ResimdosyaAd">
+                                                            </div>
+
+                                                        }
+                                                        sayac++;
+                                                    }
+
+
+
+                                                }
+                                            </div><!-- Carousel nav -->
+                                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4" id="carousel-text"></div>
+                                    <div id="slide-content" style="display: none;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--/Slider-->
+                        <div class="row hidden-xs" id="slider-thumbs">
+                            <!-- Bottom switcher of slider -->
+                            <ul class="hide-bullets">
+                                @{
+                                    int saybeni = 0;
+                                    foreach (var item in ViewBag.deneme as List<EmlakResimleri>)
+                                    {
+                                        <li class="col-sm-2">
+                                            <a class="thumbnail" id="carousel-selector-@saybeni"><img src="http:\\@Context.Request.Host\@item.ResimdosyaAd"></a>
+                                        </li>
+                                        saybeni++;
+                                    }
+
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <h2>@Html.DisplayFor(model => model.IlanFiyatı) TL</h2>
+
+            <dl class="dl-horizontal col-lg-3">
+                <dt>
+                    <p>Ilan Verilme Tarihi</p>
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.IlanTarihi)
+                </dd>
+                <dt>
+                    Emlak Tipi
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.EmlakinTipi.EmlakTipiAdi)
+                </dd>
+                <dt>
+                    Oda Sayısı
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.OdaSayısı)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.M2)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.M2)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.BinaYasi)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BinaYasi)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.BulunduguKat)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BulunduguKat)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.KatSayısı)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.KatSayısı)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Isıtma)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Isıtma)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.BanyoSayısı)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.BanyoSayısı)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Esyalımı)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Esyalımı)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.SiteIcindemi)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.SiteIcindemi)
+                </dd>
+            </dl>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @Html.Raw(@Model.IlanAcıklama)
+
+        </div>
+        <div class="panel-footer">
+            <a asp-action="Index">Geri</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-12">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div id="map"><iframe width="100%" height="450" frameborder="0" style="border:0" src="@ViewBag.Harita"></iframe></div>
+
+        </div>
+    </div>
+</div>
+    
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('#myCarousel').carousel({
+            interval: 5000
+        });
+        var id = 0;
+        $('#carousel-text').html($('#slide-content-' + id).html());
+        $('[id^=carousel-selector-]').click(function () {
+            id = this.id.substring(this.id.lastIndexOf('-'));
+            id = parseInt(id.replace('-', ''));
+            $('#myCarousel').carousel(id);
+        });
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+            id = $('#myCarousel .active').index('#myCarousel .item');
+            $('#carousel-text').html($('#slide-content-' + id).html());
+        });
+    });
+</script>
